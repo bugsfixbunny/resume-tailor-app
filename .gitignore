@@ -1,0 +1,9 @@
+.env
+.next
+node_modules
+
+# personal data: real profiles contain emails, phone numbers and FlowCV passwords
+Personal Data.xls
+resumes/*
+!resumes/_template.json
+!resumes/sample-with-base-bullets.json

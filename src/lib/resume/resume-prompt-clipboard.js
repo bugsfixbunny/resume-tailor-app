@@ -1,0 +1,165 @@
+/** Static prompt copied from the manual-mode “Resume prompt” dock button. */
+export const RESUME_PROMPT_CLIPBOARD = `I will provide:
+
+1. A master resume 
+2. A job description
+
+Your task is to create a highly tailored ATS-optimized custom resume based on the job description while maintaining the realism, timeline accuracy, writing quality, and career progression from the master resume.
+
+The output MUST be in JSON format only.
+
+The JSON structure MUST use these exact keys only:
+
+{
+"title": {},
+"summary": "",
+"skills": {},
+"experience": []
+}
+
+========================
+VERY IMPORTANT RULES
+========================
+
+- The resume must feel completely human-written and recruiter-friendly.
+- Avoid AI-generated feeling.
+- You don't need to care about the master resume.
+- You only need to depend on the job description and make a resume what is fully 100% matched with job description on skills and experience. You should reflect all skills of job description into resume and should make experience that include all skills and experience of new job description. 
+- ATS optimization is the highest priority.
+- Match the job description keywords naturally throughout the resume. (Impact, Skills, experience)
+- Maintain realistic technology timelines based on actual industry adoption years.
+- Keep career progression believable and chronological.
+- Do not use technologies in years before they realistically existed or became widely adopted.
+- Keep the two oldest experiences mostly untouched. Focus the resume tailoring primarily on the most recent positions. 
+
+========================
+SUMMARY REQUIREMENTS
+========================
+
+Write a powerful 3-line professional summary that:
+-You don't need to care about the master resume.
+- Hooks recruiters in under 10 seconds
+- Includes exact keywords from the job description
+- Includes years of experience
+- Highlights backend/full stack/cloud expertise
+- Please update based on job description as human talking style
+- Includes measurable achievements naturally
+- Sounds realistic and professional
+
+Do NOT use repetitive buzzwords.
+
+========================
+SKILLS SECTION REQUIREMENTS
+========================
+
+The "skills" key must contain categorized skills sections.
+
+You can change the skills structure based on resume. It is free and not fixed.
+
+Requirements:
+- Must Include all exact technologies from the JD
+- Include ATS keywords naturally
+- Keep categories recruiter-friendly
+- Prioritize the technologies most relevant to the role
+- Remove unrelated technologies
+- Do not overstuff keywords
+- Keep realistic based on the candidate’s career timeline
+
+========================
+WORK EXPERIENCE REQUIREMENTS
+========================
+
+VERY IMPORTANT:
+- Preserve realistic timeline progression.
+- Technologies MUST align with real-world adoption years.
+- Early roles must contain older technologies.
+- Modern stacks should appear only in later roles.
+
+The “experience" section must:
+- Include all companies from the master resume
+- Maintain chronological order
+- Maintain realistic seniority progression
+- Tailor every role toward the target job description
+
+Each role must contain:
+- Company
+- Role
+- Location
+- Dates
+- Description array
+
+Each role should contain:
+- Most bullets should be approximately 2 lines long
+- Bullets should include measurable impact where possible
+- Bullets should include ATS keywords naturally
+- Bullets should feel realistic and human-written
+
+========================
+ACTION VERB RULES
+========================
+
+Do NOT repeat the same action verbs too often.
+
+Avoid excessive repetition of words like:
+- Developed
+- Built
+- Engineered
+- Delivered
+- Implemented
+
+Use varied strong action verbs naturally.
+
+========================
+WRITING STYLE RULES
+========================
+
+- Keep bullets concise but impactful
+- Most bullets should visually appear as 2 lines
+- Use recruiter-friendly formatting
+- Keep ATS parsing clean
+- Avoid overly fancy formatting
+- Avoid tables
+- Avoid emojis
+- Avoid excessive bolding
+- Only bold important technologies or keywords
+
+========================
+ATS OPTIMIZATION RULES
+========================
+
+The final resume should:
+- Maximize ATS keyword alignment
+- Match the job description naturally
+- Maintain recruiter readability
+- Maintain realism
+- Pass ATS parsing cleanly
+- Feel like a real senior engineer wrote it
+
+========================
+OUTPUT FORMAT
+========================
+
+Output ONLY valid JSON.
+
+Do not include explanations.
+Do not include markdown.
+Do not include code fences.
+
+Use this exact JSON structure:
+
+{
+"title": {
+"name": "",
+"title": "",
+"contact": {
+"email": "",
+"phone": "",
+"location": "",
+"linkedin": ""
+}
+},
+"summary": "",
+"skills": {},
+"experience": []
+}
+`;
